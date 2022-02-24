@@ -6,13 +6,13 @@ import { NgForm } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent  {
   title = 'regform';
 
   citylist=[ 'Durgapur','kolkata','Burdwan','Lucknow','Delhi'];
-  onSubmit(contactForm : NgForm){
-    console.log(contactForm.value);
-    if(contactForm.value == 'True')
+  onSubmit(RefForm : NgForm){
+    console.log(RefForm.value);
+    if(RefForm.value == 'True')
      alert("The Data is stored oin server")
     else
     alert("Pls Enter the Data")
