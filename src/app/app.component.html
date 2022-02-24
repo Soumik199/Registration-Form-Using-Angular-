@@ -13,33 +13,34 @@
          <div [ngClass]="'userdetails'">
                   <div [ngClass]="'input-box'">
                     <span [ngClass]="'details'">First Name:</span>
-                    <input type="text"  placeholder="Enter  Your Name"  name="first"  ngModel required > 
+                    <input type="text"  placeholder="Enter  Your Name"  name="first"  ngModel required minlength="4" maxlength="10"> 
                   </div>
 
                   <div [ngClass]="'input-box'">
                        <span [ngClass]="'details'">Last Name:</span>
-                         <input type="text"  placeholder="Enter  Your  Last Name" name="Last" ngModel required> 
+                         <input type="text"  placeholder="Enter  Your  Last Name" name="Last" ngModel required  minlength="4" maxlength="10"> 
                    </div>
 
                       <div [ngClass]="'input-box'">
                            <span [ngClass]="'details'">Email Id:</span>
-                           <input type="email" placeholder="Enter  Your Email" name="Email" ngModel  required> 
+                           <input type="email" placeholder="Enter  Your Email" name="Email" ngModel required email> 
                        </div>
 
                       <div [ngClass]="'input-box'">
                         <span [ngClass]="'details'">Phone No:</span>
-                           <input type="number" placeholder="Enter Your Number"  name="Number" ngModel  required> 
+                           <input type="tel" placeholder="Enter Your Number"  name="Number" ngModel  required pattern= "[789][0-9]{9}" > 
                      </div>
   
 
                         <div [ngClass]="'input-box'">
                                <span [ngClass]="'details'">Password:</span>
-                               <input type="password" placeholder="Enter  Your Password" name="Password" ngModel  required> 
+                               <input type="password"id="Password" placeholder="Enter  Your Password" name="Password" ngModel  required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"> 
                         </div>
 
                       <div [ngClass]="'input-box'">
                           <span [ngClass]="'details'">Confirm Password:</span>
-                         <input type="password" placeholder="Confirm Password" name="Confirm"ngModel  required> 
+                         <input type="password" id ="Confirm" placeholder="Confirm Password" name="Confirm" ngModel   required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"> 
+                         
                         </div>
 
                     <div [ngClass]="'input-box'">
@@ -54,7 +55,7 @@
 
                      <div [ngClass]="'input-box'">
                          <span [ngClass]="'details'">State:</span>
-                         <input type="text" placeholder="Enter the state" name="Sate" ngModel  required>  
+                         <input type="text" placeholder="Enter the state" name="State" ngModel  required>  
                         </div>
                      <div [ngClass]="'input-box'">
                                <span [ngClass]="'details'">Choose a city:</span>

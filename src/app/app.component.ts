@@ -17,4 +17,5 @@ export class AppComponent  {
     else
     alert("Pls Enter the Data")
   }
+  
 }
