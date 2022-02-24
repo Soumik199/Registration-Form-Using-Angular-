@@ -12,6 +12,9 @@ export class AppComponent {
   citylist=[ 'Durgapur','kolkata','Burdwan','Lucknow','Delhi'];
   onSubmit(contactForm : NgForm){
     console.log(contactForm.value);
-    alert("The Data is stored oin server")
+    if(contactForm.value == 'True')
+     alert("The Data is stored oin server")
+    else
+    alert("Pls Enter the Data")
   }
 }
